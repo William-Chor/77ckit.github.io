@@ -2,7 +2,7 @@ body {
     background-color: rgb(228, 238, 247);
 }
 
-#AFC, #CAF, #CONMEBOL, #CONCACAF, #OFC, #UEFA {
+#INTRODUCTION, #CAF, #CONMEBOL, #CONCACAF, #OFC, #UEFA {
     background: rgb(255, 255, 255);
     border-radius: 8px;
     margin: 5px;
@@ -90,7 +90,7 @@ h3 {
 }
 
 
-#AFC {
+#INTRODUCTION {
     order: 2;
     width: 25%;
     height: auto;
@@ -159,7 +159,7 @@ h3 {
 }
 
 @media only screen and (max-width: 1000px) {
-    #AFC {order: 2; width: 80%}
+    #INTRODUCTION {order: 2; width: 80%}
     #CAF {order: 3; width: 80% }
     #CONMEBOL {order: 4; width: 80% }
     #CONCACAF {order: 5; width: 80% }
