@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+    <head>
+        <title>Football Club</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style type="text/css">
+            fieldset {
+                border-radius: 10px;
+            }
+        </style>
+
+        <script language="javascript" type="text/javascript">
+            function print_result() {
+                var nickname = document.f1.nickname.value;
+                var firstname = document.f1.firstname.value;
+                alert("Hello " + nickname + " " + firstname + "\n Welcome You!");
+
+                var email = document.f1.email.value;
+
+                var dob = document.f1.dob.value;
+
+                var gender;
+                if (document.f1.gender[0].checked)
+                    gender = document.f1.gender[0].value;
+                else
+                    gender = document.f1.gender[1].value;
+
+                var index = document.f1.team.selectedIndex;
+                var team = document.f1.team.options[index].value;
+
+                var position = ""
+                var position_len = document.f1.position.length;
+                for (var i = 0; i < position_len; i++) {
+                    if (document.f1.position[i].checked)
+                        position = position + document.f1.position[i].value + " ";
+                }
+                alert("The following is the confirmation information: \n" + "Gender: " + gender + "\nDOB: " + dob + "\nEmail: " + email + "\nFavorite Team: " + team + "\nPosition: "  + position);
+
+            }
+
+            function function1() {
+                window.location.replace("index.html");
+                return false;
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Welcome to the Football Club!</h1>
+        <p>
+            We need to give you relevant pages based on your preferences.
+        </p>
+        <form id="f1" name="f1" onSubmit="print_result()" action="index.html">
+            <fieldset>
+                <legend>Personal Details</legend>
+                Nick Name: 
+                <input type="text" name="nickname" required="required"/> 
+                <br />
+                First Name: 
+                <input type="text" name="firstname" /> 
+                <br />
+                Gender: 
+                <input type="radio" name="gender" value="M" required="required" checked="checked"/> 
+                Male  
+                <input type="radio" name="gender" value="F" />
+                Female 
+                <br />
+                Date of Birth: 
+                <input type="date" name="dob" required="required"/> 
+                <br />
+                Email: 
+                <input type="email" name="email" required="required" />
+            </fieldset>
+            <fieldset>
+                <legend>Team Information</legend>
+                Favorite Team:
+                <select name="team">
+                    <option value="">-- Select One Team --</option>
+                    <optgroup label="Asian Football Confederation (AFC)">
+                        <option>Iran National Football Team</option>
+                        <option>Japan National Football Team</option>
+                        <option>South Korea National Football Team</option>
+                        <option>Australia National soccer Team</option>
+                        <option>Saudi Arabia National Football Team</option>
+                        <option>North Korea National Football Team</option>
+                        <option>China National Football Team</option>
+                        <option>Vietnam National Football Team</option>
+                        <option>Hong Kong National Football Representative Team</option>
+                        <option>Chinese Taipei National Football Team</option>
+                    </optgroup>
+                    <optgroup label="Confederation of African Football (CAF)">
+                        <option>Senegal National Football Team</option>
+                        <option>Tunisia National Football Team</option>
+                        <option>Nigeria National Football Team</option>
+                        <option>Morocco National Football Team</option>
+                        <option>DR Congo National Football Team</option>
+                        <option>Nigeria National Football Team</option>
+                        <option>Cameroon National Football Team</option>
+                        <option>South Africa National Football Team</option>
+                        <option>Ghana National Football Team</option>
+                        <option>Ivory Coast National Football Team</option>
+                    </optgroup>
+                    <optgroup label="Confederación sudamericana de Fútbol (CONMEBOL)">
+                        <option>Brazil National Football Team</option>
+                        <option>Uruguay National Football Team</option>
+                        <option>Argentina National Football Team</option>
+                        <option>Colombia National Football Team</option>
+                        <option>Chile National Football Team</option>
+                        <option>Paraguay National Football Team</option>
+                        <option>Venezuela National Football Team</option>
+                        <option>Ecuador National Football Team</option>
+                        <option>Peru National Football Team</option>
+                        <option>Bolivia National Football Team</option>
+                    </optgroup>
+                    <optgroup label="Confederation of North, Central American and Caribbean Association Football (CONCACAF)">
+                        <option>Mexico National Football Team</option>
+                        <option>United States National soccer Team</option>
+                        <option>Costa Rica National Football Team</option>
+                        <option>Jamaica National Football Team</option>
+                        <option>Honduras National Football Team</option>
+                        <option>Canada National soccer Team</option>
+                        <option>Panama National Football Team</option>
+                        <option>Trinidad and Tobago National Football Team</option>
+                        <option>Haiti National Football Team</option>
+                        <option>Guatemala National Football Team</option>
+                    </optgroup>
+                    <optgroup label="Oceania Football Confederation (OFC)">
+                        <option>New Zealand National Football Team</option>
+                        <option>Solomon Islands National Football Team</option>
+                        <option>New Caledonia National Football Team</option>
+                        <option>Tahiti National Football Team</option>
+                        <option>Fiji National Football Team</option>
+                        <option>Tonga National Football Team</option>
+                        <option>Vanuatu National Football Team</option>
+                        <option>Papua New Guinea National Football Team</option>
+                        <option>Cook Islands National Football Team</option>
+                        <option>Samoa National Football Team</option>
+                        <option>American Samoa National Football Team</option>
+                    </optgroup>
+                    <optgroup label="Union of European Football Associations (UEFA)">
+                        <option>Belgium National Football Team</option>
+                        <option>France National Football Team</option>
+                        <option>England National Football Team</option>
+                        <option>Italy National Football Team</option>
+                        <option>Spain National Football Team</option>
+                        <option>Germany National Football Team</option>
+                        <option>Netherlands National Football Team</option>
+                        <option>Sweden National Football Team</option>
+                        <option>Norway National Football Team</option>
+                        <option>Denmark National Football Team</option>
+                        <option>Iceland National Football Team</option>
+                        <option>Switzerland National Football Team</option>
+                    </optgroup>
+                </select>
+                <br />
+                    Your Position: 
+                    <input type="checkbox" name="position" value="CF" />
+                    Centre Forward
+                    <input type="checkbox" name="position" value="FW" />
+                    Striker
+                    <input type="checkbox" name="position" value="W" />
+                    Winger
+                    <input type="checkbox" name="position" value="GK" />
+                    Goalkeeper
+                    <input type="checkbox" name="position" value="CB" />
+                    Center Back 
+                    <input type="checkbox" name="position" value="S" />
+                    Sweeper <br />
+                    <input type="checkbox" name="position" value="F" />
+                    Fullback
+                    <input type="checkbox" name="position" value="WB" />
+                    Wingback
+                    <input type="checkbox" name="position" value="DM" />
+                    Defensive Midfielder
+                    <input type="checkbox" name="position" value="CM" />
+                    Central Midfielder
+                    <input type="checkbox" name="position" value="AM" />
+                    Attacking Midfielder
+            </fieldset>
+            <br />
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </form>
+    </body>
+</html>
